@@ -824,7 +824,12 @@ class qualysScanReport:
         return vuln_ready
 
 
-maxInt = sys.maxsize
+maxInt = int(4000000)
+maxSize = sys.maxsize
+
+if maxSize > maxInt and type(maxSize) == int:
+    maxInt = maxSize
+
 decrement = True
 
 while decrement:
